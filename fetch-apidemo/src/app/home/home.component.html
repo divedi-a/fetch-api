@@ -1,0 +1,92 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h5>GET API from given api</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Get User Name On Button click</h5>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button class="btn btn-block btn-primary mb-3 w-100" (click)="  getApidata();">Click to
+                                    Show Names</button>
+                            </div>
+                            <div class="col-sm-12">
+                                <select class="form-select">
+                                    <option *ngFor="let user of userList" [value]="user.name">
+                                        {{user.name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Get User Name On Initilization</h5>
+
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li *ngFor="let user of userList2"> {{user.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</section>
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-stipped table-bordered">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Username</th>
+                            <th>Website</th>
+                            <th>Company</th>
+                        </tr>
+
+                        <tbody>
+                            <tr *ngFor="let user of userList2">
+                                <td>{{user.id}}</td>
+                                <td>{{user.name}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.phone}}</td>
+                                <td>{{user.username}}</td>
+                                <td>{{user.website}}</td>
+                                <td>{{user.company.name}}, {{user.company.catchPhrase}}</td>
+                               
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
