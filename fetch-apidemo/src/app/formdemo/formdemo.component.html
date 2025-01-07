@@ -1,0 +1,99 @@
+<section>
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-sm-12">
+                <p>formdemo works!</p>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Get Form data</h6>
+                    </div>
+                    <div class="card-body">
+                        <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm.value)">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <input type="text" class="form-control" name="name" placeholder="Name" ngModel>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <input type="text" class="form-control" name="email" placeholder="email"
+                                            ngModel>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <input type="text" class="form-control" name="rating" placeholder="Rating"
+                                            ngModel>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group mb-2">
+                                        <input type="text" class="form-control" name="address" placeholder="Address"
+                                            ngModel>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100" type="submit">Submit</button>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Form data shows in table</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Email</th>
+                                  <th>Rating</th>
+                                  <th>Address</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngIf="submittedData.length === 0">
+                                    <td colspan="4">No data submitted yet.</td>
+                                  </tr>
+                                  
+                                <tr *ngFor="let person of submittedData">
+                                  <td>{{ person.name }}</td>
+                                  <td>{{ person.email }}</td>
+                                  <td>{{ person.rating }}</td>
+                                  <td>{{ person.address }}</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

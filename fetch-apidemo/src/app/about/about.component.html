@@ -2,8 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                About Work
-
+               <p> About Work</p>
+               <small>Data Binding</small>
+            </div>
+            <div class="col-sm-12">
+                <img alt="item" [src]="itemImageUrl">
+                <input type="text" [(ngModel)]="name" />
+                <p>Hello, {{ name }}</p>
             </div>
         </div>
     </div>
