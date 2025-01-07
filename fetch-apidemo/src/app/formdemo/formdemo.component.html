@@ -12,7 +12,7 @@
                         <h6>Get Form data</h6>
                     </div>
                     <div class="card-body">
-                        <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm.value)">
+                        <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm)">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group mb-2">
@@ -79,7 +79,7 @@
                                 <tr *ngIf="submittedData.length === 0">
                                     <td colspan="4">No data submitted yet.</td>
                                   </tr>
-                                  
+
                                 <tr *ngFor="let person of submittedData">
                                   <td>{{ person.name }}</td>
                                   <td>{{ person.email }}</td>

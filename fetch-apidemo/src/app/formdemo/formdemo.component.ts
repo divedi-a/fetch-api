@@ -14,15 +14,11 @@ export class FormdemoComponent {
   onSubmit(data: any):void
   {
  
-    this.submittedData.push(data); // Add the form data to the array
+    this.submittedData.push(data.value); // Add the form data to the array
     console.log(data);
+    data.resetForm();
 
-    data.reset({
-      name: '',
-      email: '',
-      rating: '',
-      address: ''
-    });
+    
  
 
 
